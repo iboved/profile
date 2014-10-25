@@ -11,9 +11,14 @@ class User extends Profile
         $this->status = "Active user";
     }
 
+    public function __destruct()
+    {
+        echo "Accout successfully deleted!";
+    }
+
     public function editFirstName($firstname)
     {
-        $this->firstName = $firstname;
+        echo "You can not change your firstname, please contact Support";
     }
 
     public function editLastName($lastname)

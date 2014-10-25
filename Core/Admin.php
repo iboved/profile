@@ -40,4 +40,19 @@ class Admin extends Profile
         } else $this->age = $age;
     }
 
+    public function ban(User $user)
+    {
+        $user->status = "Banned!";
+    }
+
+
+    public function unban(User $user)
+    {
+        $user->status = "Active user";
+    }
+
+    public function delete(User $user)
+    {
+        unset($user);
+    }
 }

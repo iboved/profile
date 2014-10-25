@@ -6,12 +6,11 @@ use Core\User;
 use Core\Support;
 use Core\Admin;
 
-$User = new User("Pavel", "Lavin", "Female", "18");
-var_dump($User);
-
+$User = new User("Pavel", "Lavin", "Male", "18");
 $Support = new Support("Alina", "Naumova", "Female", "24");
-var_dump($Support);
+$Admin = new Admin("Vova", "Gavrylov", "Male", "21");
+
 $Support->ban($User);
-var_dump($User);
 $Support->unban($User);
-var_dump($User);
+
+$Admin->delete($User);
