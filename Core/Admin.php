@@ -39,4 +39,5 @@ class Admin extends Profile
             $user->age = $age;
         } else $this->age = $age;
     }
+
 }

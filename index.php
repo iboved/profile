@@ -11,9 +11,7 @@ var_dump($User);
 
 $Support = new Support("Alina", "Naumova", "Female", "24");
 var_dump($Support);
-$Support->editFirstName("Mark", $User);
+$Support->ban($User);
 var_dump($User);
-
-$Admin = new Admin("Vova", "Gavrylov", "Male", "21");
-$Admin->editLastName("Bedford", $User);
+$Support->unban($User);
 var_dump($User);
