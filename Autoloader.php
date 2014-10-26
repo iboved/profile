@@ -2,14 +2,12 @@
 
 class Autoloader
 {
-    private static $loadedFilename;
-
     public static function loadPackages($className)
     {
         $pathParts = explode('\\', $className);
-        self::$loadedFilename = implode(DIRECTORY_SEPARATOR, $pathParts) . '.php';
-        if (file_exists(self::$loadedFilename)) {
-            require_once(self::$loadedFilename);
+        $loadedFilename = implode(DIRECTORY_SEPARATOR, $pathParts) . '.php';
+        if (file_exists($loadedFilename)) {
+            require_once($loadedFilename);
         }
     }
 }
